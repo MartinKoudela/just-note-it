@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Just-Note-It - Register page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section class="register">
+    <div id="banner_div">
+        <img src="banner.jpg" id="banner" alt="banner" draggable="false">
+    </div>
+    <div id="register_text">
+        <h1>Register</h1>
+    </div>
+    <form action="register.php" method="POST">
+        <div id="user_name">
+            <label for="register_name">Create username</label>
+            <br><input id="register_name" type="text" name="fullname" required>
+        </div>
+
+        <div id="user_password">
+            <label for="register_password">Create password</label>
+            <br><input id="register_password" type="password" name="password" required>
+        </div>
+
+        <div id="user_confirm">
+            <input type="submit" id="register_button" value="Continue">
+        </div>
+    </form>
+    <div id="sign_in">
+        <p>Already have an account? <a href="login.html">Sign in</a></p>
+    </div>
+</section>
+</body>
+<script src="js/script.js"></script>
+</html>
