@@ -1,0 +1,305 @@
+body {
+    background: white;
+    margin: 40px;
+}
+/* Add modern defaults and design tokens */
+:root {
+    --bg: #ffffff;
+    --surface: #fafafa;
+    --surface-2: #fff5f2;
+    --text: #1f2328;
+    --muted: #6b7280;
+    --accent: #f17063;
+    --accent-2: #F7AF9D;
+    --border: #e5e7eb;
+    --shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+/* Improve base typography and smoothing */
+html {
+    font-size: 16px;
+}
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--text);
+    background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+    line-height: 1.5;
+    margin: 24px;
+}
+/* Responsive container helpers */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 16px;
+}
+#header {
+    border-radius: 5px 5px 0 0;
+    margin: 0 auto;
+    width: 1350px;
+    background: #F7AF9D;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-bottom: 0;
+
+}
+#header {
+    /* Make responsive and refined */
+    max-width: 1210px;
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    padding: 18px 20px;
+    border: 1px solid var(--border);
+    border-bottom: 0;
+    border-radius: 12px 12px 0 0;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+#text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#text {
+    color: var(--text);
+}
+
+#header_title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: black;
+}
+#header_title {
+    color: #0b0f14;
+    letter-spacing: -0.01em;
+}
+
+#tips_link {
+    text-decoration: none;
+    float: right;
+    color: #0b0f14;
+    opacity: 0.65; /* fix invalid % */
+    transition: opacity .2s ease, transform .2s ease;
+}
+#tips_link:hover,
+#tips_link:focus-visible {
+    opacity: 1;
+    transform: translateY(-1px);
+    outline: none;
+}
+#think_emoji {
+    font-size: 2.5rem;
+
+}
+#question_mark {
+    font-size: 2rem;
+    margin-left: -28px;
+}
+
+#notes {
+    margin: 0 auto;
+    height: 550px;
+    width: 1300px;
+    border-radius: 0 0 5px 5px;
+    padding: 30px;
+    background: whitesmoke;
+    border: 1px solid lightgrey;
+    border-top: 0;
+}
+#notes {
+    /* Responsive card */
+    max-width: 1200px;
+    width: 100%;
+    min-height: 420px;
+    height: auto;
+    border-radius: 0 0 12px 12px;
+    padding: 24px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-top: 0;
+    box-shadow: var(--shadow);
+    backdrop-filter: saturate(125%) blur(4px);
+}
+
+#nav_link {
+    float: right;
+    display: inline-block;
+    font-size: 1rem;
+
+}
+#nav_link {
+    float: right;
+    display: inline-flex;
+    align-items: center;
+    margin-top: -40px;
+    margin-right: 30px;
+    font-size: 0.95rem;
+}
+/* Fix invalid nested selector: target links directly */
+#nav_link a {
+    text-decoration: none;
+    color: #0b0f14;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,.12);
+    padding: 8px 12px;
+    background: #ffffffcc;
+    backdrop-filter: blur(2px);
+    transition: background .2s ease, transform .1s ease, box-shadow .2s ease, border-color .2s ease;
+}
+#nav_link a:hover,
+#nav_link a:focus-visible {
+    background: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    border-color: rgba(0,0,0,.18);
+    outline: none;
+    transition: opacity .2s ease;
+
+}
+#name {
+    font-weight: bold;
+    margin-left: 10px;
+}
+#name {
+    color: var(--text);
+    letter-spacing: .2px;
+}
+#delete {
+    margin-left: 20px;
+    text-decoration: none;
+    opacity: 0.65;
+    font-size: 2rem;
+}
+
+#delete:hover,
+#delete:focus-visible {
+    opacity: 1;
+    transition: opacity .2s ease;
+    transform: translateY(-1px);
+    outline: none;
+
+
+}
+#logout {
+    margin-left: 100px;
+}
+#logout {
+    margin-left: 24px;
+}
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    body {
+        margin: 16px;
+    }
+    #header_title {
+        font-size: 2rem;
+    }
+    #nav_link {
+        margin-top: -24px;
+        margin-right: 6px;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 768px) {
+    #header,
+    #notes {
+        border-radius: 10px;
+    }
+    #header_title {
+        font-size: 1.6rem;
+    }
+    #nav_link {
+        float: none;
+        margin: 8px 0 0 0;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    #nav_link a {
+        padding: 8px 10px;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        margin: 12px;
+    }
+    #header_title {
+        font-size: 1.4rem;
+    }
+    #notes {
+        padding: 16px;
+        min-height: 360px;
+    }
+}
+/* Optional dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0b0f14;
+        --surface: #0f141a;
+        --surface-2: #141a21;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --border: #263241;
+        --shadow: 0 8px 24px rgba(0,0,0,.45);
+    }
+    #header_title,
+    #tips_link,
+    #nav_link a,
+    #name {
+        color: var(--text);
+    }
+    #nav_link a {
+        background: #1b2430cc;
+        border-color: #2a394c;
+    }
+    #nav_link a:hover,
+    #nav_link a:focus-visible {
+        background: #222e3bcc;
+        border-color: #3a4f69;
+        box-shadow: 0 8px 24px rgba(0,0,0,.6);
+    }
+}
+/* ===== Simple sticky notes style ===== */
+#notes form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 720px;
+    margin: 12px auto 0;
+}
+
+#notes form label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#notes input[type="text"],
+#notes textarea {
+    appearance: none;
+    background: #fff9a8; /* sticky yellow */
+    border: 1px solid #e6d86b;
+    border-radius: 6px;
+    padding: 10px 12px;
+    color: inherit;
+    font-family: inherit;
+    box-shadow: 0 2px 6px rgba(0,0,0,.12);
+    outline: none;
+}
+
+#notes textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+#notes input[type="submit"] {
+    align-self: flex-end;
+    background: #ffd1a8; /* subtle accent sticky for button */
+    border: 1px solid #ffc38c;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,.12);
+}
+
+#notes input[type="submit"]:hover {
+    filter: brightness(1.03);
+}
